@@ -73,13 +73,20 @@ chaos:
 
 ---
 spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: 'true'
+    hibernate:
+      ddl-auto: update
   config:
     activate:
       on-profile: mysql
   datasource:
-    schema: classpath*:db/mysql/schema.sql
-    data: classpath*:db/mysql/data.sql
-    url: jdbc:mysql://localhost:3306/madb?useSSL=false
-    username: root
-    password: madb
+    url: jdbc:postgresql://localhost:5432/instantSystem?useSSL=false
+    username: postgres
+    password: postgres
     initialization-mode: ALWAYS
