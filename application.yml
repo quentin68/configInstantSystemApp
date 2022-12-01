@@ -7,7 +7,13 @@ server:
   shutdown: graceful
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
-spring:
+instantSystem:
+   database: postgresql
+pring:
+  datasource:
+    schema: classpath*:db/${instantSystem.database}/schema.sql
+    data: classpath*:db/${instantSystem.database}/data.sql
+
   sleuth:
     sampler:
       probability: 1.0
