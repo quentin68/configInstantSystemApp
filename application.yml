@@ -9,7 +9,7 @@ server:
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 instantSystem:
    database: postgresql
-pring:
+spring:
   datasource:
     schema: classpath*:db/${instantSystem.database}/schema.sql
     data: classpath*:db/${instantSystem.database}/data.sql
