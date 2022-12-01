@@ -86,8 +86,8 @@ spring:
     hibernate:
       ddl-auto: create
   datasource:
-    schema: classpath*:db/mysql/schema.sql
-    data: classpath*:db/mysql/data.sql
+    schema: classpath*:db/postgresql/schema.sql
+    data: classpath*:db/postgresql/data.sql
     url: jdbc:postgresql://localhost:5432/instantSystem?useSSL=false
     username: postgres
     password: postgres
