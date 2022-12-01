@@ -1,5 +1,4 @@
 zuul:
-  prefix: /api
   ignoredServices: '*'
   routes:
     parkings-service: /parkings/**
