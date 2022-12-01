@@ -84,7 +84,7 @@ spring:
           lob:
             non_contextual_creation: 'true'
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
   datasource:
     schema: classpath*:db/postgresql/schema.sql
     data: classpath*:db/postgresql/data.sql
