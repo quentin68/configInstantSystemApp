@@ -73,6 +73,9 @@ chaos:
 
 ---
 spring:
+  config:
+    activate:
+      on-profile: postgresql
   jpa:
     properties:
       hibernate:
@@ -82,9 +85,6 @@ spring:
             non_contextual_creation: 'true'
     hibernate:
       ddl-auto: update
-  config:
-    activate:
-      on-profile: postgresql
   datasource:
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql
